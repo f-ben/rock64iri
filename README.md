@@ -23,7 +23,7 @@ The following steps require your rock64 to have the latest aryufan-docker-releas
 
 2. clone this repository (dont forget the dot at the end when using git clone)
 
-		cd /mnt/usb && git clone https://github.com/f-ben/rock64iri.git && cd ./rock64iri
+		cd /mnt/usb && git clone https://github.com/f-ben/rock64iri.git && cd ./rock64iri && chmod +x *.sh
 	
 3. find neighbors in iota discord and edit neighbors-line in ./data/iri/iota.ini
 
@@ -33,16 +33,19 @@ The following steps require your rock64 to have the latest aryufan-docker-releas
 	
 4. download new database
 
-		chmod +x ./downloaddb.sh && ./downloaddb.sh
+		./downloaddb.sh
 
 5. start docker container
 
-		chmod +x ./startdockercontainer.sh && ./startdockercontainer.sh
+		./startdockercontainer.sh
 
-Forward the following ports to your rock64:
+6. check container log to see if IRI is working (get out with ctrl+c)
 
-Port/Type | Use 
---- | ---
-14265/tcp | IOTA/IRI API port
-14600/udp | IOTA/IRI UDP connection port
-15600/tcp | IOTA/IRI TCP connection port
+		./showlog.sh
+
+7. Forward the following ports to your rock64:
+
+		Port/Type and usage
+		14265/tcp | IOTA/IRI API port
+		14600/udp | IOTA/IRI UDP neighbor connection port
+		15600/tcp | IOTA/IRI TCP neighbor connection port
