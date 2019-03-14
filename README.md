@@ -43,7 +43,7 @@ The following steps require your rock64 to have the latest aryufan-docker-releas
 
 		./showlog.sh
 
-7. Forward the following ports to your rock64:
+7. Forward the following ports from your router to your rock64:
 
 		Port/Type and usage
 		14265/tcp | IOTA/IRI API port
