@@ -25,9 +25,9 @@ The following steps require your rock64 to have the latest aryufan-docker-releas
 
 		cd /mnt/usb && git clone https://github.com/f-ben/rock64iri.git && cd ./rock64iri && chmod +x *.sh
 	
-3. find neighbors in iota discord and edit neighbors-line in ./data/iri/iota.ini
+3. find neighbors in iota discord and edit neighbors-line in iota.ini config file
 
-		nano ./data/iri/iota.ini
+		nano ./data/iota.ini
 
 		NEIGHBORS = udp://neighbor1:port tcp://neighbor2:port udp://neighbor3:port tcp://neighbor4:port
 	
