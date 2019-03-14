@@ -21,7 +21,7 @@ The following steps require your rock64 to have the latest aryufan-docker-releas
 
 		mount -a
 
-2. clone this repository (dont forget the dot at the end when using git clone)
+2. clone this repository and set file permissions
 
 		cd /mnt/usb && git clone https://github.com/f-ben/rock64iri.git && cd ./rock64iri && chmod +x *.sh
 	
