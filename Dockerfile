@@ -53,4 +53,4 @@ VOLUME /data
 EXPOSE 14600/udp
 EXPOSE 15600
 EXPOSE 14265
-ENTRYPOINT java -XX:+CrashOnOutOfMemoryError -Xmx2G -Xms1G -jar /iri/iri.jar -c /data/iota.ini
+ENTRYPOINT java -XX:+CrashOnOutOfMemoryError -Xmx3G -Xms1G -jar /iri/iri.jar -c /data/iota.ini
