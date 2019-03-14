@@ -37,7 +37,7 @@ The following steps require your rock64 to have the latest aryufan-docker-releas
 
 5. start docker container
 
-		./startdockercontainer.sh
+		chmod +x && ./startdockercontainer.sh
 
 Forward the following ports to your rock64:
 
