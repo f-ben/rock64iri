@@ -1,4 +1,4 @@
-# rock64iri
+# rock64iota IRI
 IOTA IRI dockerfiles for the rock64 SBC
 
 The following steps require your rock64 to have the latest aryufan-docker-release installed and an external USB SSD formatted with ext4 filesystem.
@@ -23,7 +23,7 @@ The following steps require your rock64 to have the latest aryufan-docker-releas
 
 2. clone this repository (dont forget the dot at the end when using git clone)
 
-		cd /mnt/usb && git clone https://github.com/f-ben/rock64iri.git .
+		cd /mnt/usb && git clone https://github.com/f-ben/rock64iota.git && cd ./rock64iota
 	
 3. find neighbors in iota discord and edit neighbors-line in ./data/iri/iota.ini
 
