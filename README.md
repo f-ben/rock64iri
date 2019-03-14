@@ -1,7 +1,7 @@
 # rock64iri
 IOTA IRI dockerfiles for the rock64 SBC
 
-The following steps require your rock64 to have the latest aryufan-docker-release installed and a SSD formatted with ext4 filesystem.
+The following steps require your rock64 to have the latest aryufan-docker-release installed and an external USB SSD formatted with ext4 filesystem.
 
 1. connect and mount external USB SSD
 
