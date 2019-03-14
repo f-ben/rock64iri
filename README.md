@@ -33,7 +33,7 @@ The following steps require your rock64 to have the latest aryufan-docker-releas
 	
 4. download new database
 
-		chmod +x && ./download_db.sh
+		chmod +x && ./downloaddb.sh
 
 5. start docker container
 
