@@ -7,9 +7,9 @@ The following steps require your rock64 to have the latest ayufan-**containers**
 
 1. connect and mount external USB SSD
 
-	1.1 add yourself to docker group
+	1.1 add yourself to docker group, update system and restart
 	
-		sudo adduser ${USER} docker
+		sudo adduser ${USER} docker && sudo apt-get update && sudo apt-get upgrade -y && sudo reboot
 
 	1.2 create mount folder
 	
