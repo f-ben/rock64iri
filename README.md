@@ -53,3 +53,7 @@ use ```docker stop iri``` ```docker start iri``` or ```docker restart iri``` to 
 ```./showlog.sh``` can be used to check the log of IRI (exit with CTRL+C)
 
 ```./getnodeinfo.sh``` can be used to check the local node information
+
+### Thanks
+
+Thanks a lot to muxXer and perfectstorm85 for the IRI/Docker/Rock64 work they did before. Made it a lot easier for me and I was able to copy/paste a lot of stuff :)
