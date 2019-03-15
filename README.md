@@ -48,8 +48,8 @@ The following steps require your rock64 to have the latest ayufan-**containers**
 
 ### Additional Information
 
+use ```docker stop iri``` ```docker start iri``` or ```docker restart iri``` to stop/start/restart the IRI container
+
 ```./showlog.sh``` can be used to check the log of IRI
 
 ```./getnodeinfo.sh``` can be used to check the local node information
-
-use ```docker stop iri``` ```docker start iri``` or ```docker restart iri``` to stop/start/restart the IRI container
