@@ -54,6 +54,8 @@ use ```docker stop iri``` ```docker start iri``` or ```docker restart iri``` to 
 
 ```./getnodeinfo.sh``` can be used to check the local node information
 
+If you need assistance feel free to ask in the iota discord #help channel or write a discord PM to Ben.#0981
+
 ### Thanks
 
 Thanks a lot to muxXer and perfectstorm85 for the IRI/Docker/Rock64 work they did before. Made it a lot easier for me and I was able to copy/paste a lot of stuff :)
