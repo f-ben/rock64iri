@@ -14,7 +14,7 @@ RUN apt-get remove openjdk* -y \
  && echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee /etc/apt/sources.list.d/webupd8team-java.list \
  && echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list \
  && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886 \
- && apt-get update && apt-get install -y oracle-java8-installer iputils-ping nano cmake autotools-dev automake build-essential maven --no-install-rec$
+ && apt-get update && apt-get install -y oracle-java8-installer iputils-ping nano cmake autotools-dev automake build-essential maven --no-install-recommends
 
 # Clone and build RocksDB
 WORKDIR /iri-aarch64
@@ -36,7 +36,7 @@ RUN set -x \
 ENV M2_HOME=/usr/share/maven
 ENV M2=/usr/share/maven/bin
 WORKDIR /iri-aarch64/rocksdb/java/target/
-RUN mvn install:install-file -Dfile=rocksdbjni-${ROCKSDB_VERSION}-linux64.jar -DgroupId=org.rocksdb -DartifactId=rocksdbjni -Dversion=${ROCKSDB_VERSI$
+RUN mvn install:install-file -Dfile=rocksdbjni-${ROCKSDB_VERSION}-linux64.jar -DgroupId=org.rocksdb -DartifactId=rocksdbjni -Dversion=${ROCKSDB_VERSION} -Dpackaging=jar
 
 # Clone and build IRI
 WORKDIR /iri-aarch64
