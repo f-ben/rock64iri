@@ -17,7 +17,7 @@ The following steps require your rock64 to have the latest ayufan-**containers**
 	
 	1.3 find the UUID of your external drive (look for /dev/sda)
 	
-		blkid
+		sudo blkid
 	
 	1.4 add the following line to /etc/fstab (edit with ```sudo nano /etc/fstab```)
 	
