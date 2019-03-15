@@ -37,7 +37,7 @@ The following steps require your rock64 to have the latest ayufan-**containers**
 	
 4. download new database and do the initial run of the docker container
 
-		./downloaddb.sh && ./startdockercontainer.sh
+		./downloaddb.sh && ./start.sh
 
 5. Forward the following ports from your router to your rock64:
 
