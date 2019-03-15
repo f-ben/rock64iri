@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "Stopping IRI container..."
+docker stop iri
 echo "Deleting old database..."
 rm -rf ./data/mainnet*
 rm -rf ./data/spent-addresses-db
@@ -9,4 +11,6 @@ echo "Extracting file..."
 tar -xf iota.db.tgz -C ./data
 echo "Removing downloaded file..."
 rm iota.db.tgz
+echo "Starting IRI container..."
+docker start iri
 echo "...finished!"
