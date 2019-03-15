@@ -1,3 +1,8 @@
+# This dockerfile uses the Oracle 8 JDK for the build environment.
+# If you use this dockerfile you agree to the
+# "Oracle Binary Code License Agreement for the Java SE Platform Products and JavaFX"
+# found on https://java.com/license
+
 FROM arm64v8/maven:3.5-jdk-8 as builder
 ARG REPO_ROCKSDB=https://github.com/facebook/rocksdb.git
 ARG REPO_ROCKSDB_BRANCH=5.18.fb
