@@ -1,9 +1,9 @@
 ## rock64iri
-IOTA IRI dockerfiles for the rock64 SBC
+Since IRI 1.6.1 got a lot of improvements in memory management I felt it was a good time to get my rock64 out of the shelf again. IRI runs perfectly fine with 2GB of RAM these days so running it got a lot easier (without swap-file, hickups and so on). This repository is supposed to be a short tutorial and handful of usefull scripts to get IRI on your rock64 running in minutes.
 
 ### basic setup
 
-The following steps require your rock64 to have the latest ayufan-**containers**-release (https://github.com/ayufan-rock64/linux-build) installed and an external USB SSD formatted with ext4 filesystem.
+The following steps require your rock64 to have the latest ayufan-**containers-release** (https://github.com/ayufan-rock64/linux-build) installed and an external USB SSD formatted with ext4 filesystem.
 
 1. connect and mount external USB SSD
 
