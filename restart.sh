@@ -1,3 +1,3 @@
 #!/bin/sh
-
-docker restart iri
+./stop.sh
+./Start.sh
