@@ -1,3 +1,3 @@
 #!/bin/sh
-echo "Waiting up to 60 seconds for IRI to stop..."
-docker stop --time=60 iri
+echo "Waiting for IRI to stop..."
+sudo pkill --signal SIGTERM -f iri.jar && docker stop iri
