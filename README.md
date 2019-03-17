@@ -64,4 +64,4 @@ If you need assistance feel free to ask in the iota discord ```#help``` channel 
 
 ### Thanks
 
-Thanks a lot to muxXer and perfectstorm85 for the IRI/Docker/Rock64 work they did before. Made it a lot easier for me and I was able to copy/paste a lot of stuff :)
+Thanks a lot to muXxer and perfectstorm85 for the IRI/Docker/Rock64 work they did before. Made it a lot easier for me and I was able to copy/paste a lot of stuff :)
