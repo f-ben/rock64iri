@@ -48,7 +48,9 @@ The following steps require your rock64 to have the latest ayufan-**containers-r
 
 ### Additional Information
 
-use ```docker stop iri``` ```docker start iri``` or ```docker restart iri``` to stop/start/restart the IRI container
+use ```./stop.sh``` ```./start.sh``` or ```./restart.sh``` to stop/start/restart the IRI container
+
+**Do not use** ```docker stop``` or ```docker restart``` since this can break your IRI database!
 
 ```./showlog.sh``` can be used to check the log of IRI (exit with CTRL+C)
 
