@@ -35,11 +35,15 @@ The following steps require your rock64 to have the latest ayufan-**containers-r
 
 		NEIGHBORS = udp://neighbor1:port tcp://neighbor2:port udp://neighbor3:port tcp://neighbor4:port
 	
-4. download new database and do the initial run of the docker container
+4. initialize docker container
 
-		./downloaddb.sh && ./start.sh
+		./run.sh
 
-5. Forward the following ports from your router to your rock64:
+5. download snapshotted database
+
+		./downloaddb.sh
+
+6. Forward the following ports from your router to your rock64:
 
 		Port/Type and usage
 		14265/tcp | IOTA/IRI API port
