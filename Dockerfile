@@ -19,7 +19,8 @@ RUN apt-get remove openjdk* -y \
  && echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee /etc/apt/sources.list.d/webupd8team-java.list \
  && echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list \
  && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886 \
- && apt-get update && apt-get install -y oracle-java8-installer iputils-ping nano cmake autotools-dev automake build-essential maven --no-install-recommends
+ && apt-get update && apt-get install -y oracle-java8-installer iputils-ping nano cmake autotools-dev automake build-essential maven --no-install-recommends \
+ && rm -rf /var/lib/apt/lists/*
 
 # Clone and build RocksDB
 WORKDIR /iri-aarch64
@@ -52,9 +53,14 @@ RUN mvn clean compile && mvn package
 # Run IRI
 FROM openjdk:jre-slim
 COPY --from=builder /iri-aarch64/iri/target/iri-*.jar /iri/iri.jar
+RUN apt-get update && apt-get install -y tar curl jq --no-install-recommends \
+    && rm -rf /var/lib/apt/lists/*
+WORKDIR ./snapshots
+RUN curl https://x-vps.com/iota.db.tgz -o iota.db.tgz && tar -xf iota.db.tgz -C . && rm iota.db.tgz
 VOLUME /iri
 VOLUME /data
+VOLUME /snapshots
 EXPOSE 14600/udp
 EXPOSE 15600
 EXPOSE 14265
-ENTRYPOINT java -XX:+CrashOnOutOfMemoryError -Xmx3G -Xms1G -jar /iri/iri.jar -c /data/iota.ini
+ENTRYPOINT java -XX:+CrashOnOutOfMemoryError -Xmx3G -Xms1G -jar ../iri/iri.jar -c ../data/iota.ini
