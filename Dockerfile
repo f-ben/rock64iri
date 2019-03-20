@@ -55,11 +55,8 @@ FROM openjdk:jre-slim
 COPY --from=builder /iri-aarch64/iri/target/iri-*.jar /iri/iri.jar
 RUN apt-get update && apt-get install -y tar curl jq --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
-WORKDIR ./snapshots
-RUN curl https://x-vps.com/iota.db.tgz -o iota.db.tgz && tar -xf iota.db.tgz -C . && rm iota.db.tgz
 VOLUME /iri
 VOLUME /data
-VOLUME /snapshots
 EXPOSE 14600/udp
 EXPOSE 15600
 EXPOSE 14265
