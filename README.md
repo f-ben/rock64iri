@@ -29,7 +29,7 @@ The following steps require your rock64 to have the latest ayufan-**containers-r
 
 2. clone this repository and set file permissions
 
-		cd /mnt/usb && git clone https://github.com/f-ben/rock64iri.git && cd ./rock64iri && chmod +x *.sh
+		cd /mnt/usb && git clone https://github.com/f-ben/rock64iri.git && cd ./rock64iri && chmod +x *.sh && sudo ./mvdocker.sh
 	
 3. find neighbors in iota discord and edit neighbors-line in iota.ini config file (edit with ```nano ./data/iota.ini```)
 
