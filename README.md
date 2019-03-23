@@ -49,7 +49,7 @@ The following steps require your rock64 to have the latest ayufan-**containers-r
 		14600/udp | IOTA/IRI UDP neighbor connection port
 		15600/tcp | IOTA/IRI TCP neighbor connection port
 
-### additional Information
+### additional information
 use ```./stop.sh``` ```./start.sh``` or ```./restart.sh``` to stop/start/restart the IRI container
 
 **Do not use** ```docker stop``` or ```docker restart``` since this can break your IRI database!
