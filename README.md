@@ -2,7 +2,6 @@
 Since IRI 1.6.1 got a lot of improvements in memory management I felt it was a good time to get my rock64 out of the shelf again. IRI runs perfectly fine with 2GB of RAM these days so running it on the rock64 got a lot easier (without swap-file, hickups and so on). This repository is supposed to be a short tutorial and handful of usefull scripts to get IRI on your rock64 running in minutes.
 
 ### basic setup
-
 The following steps require your rock64 to have the latest ayufan-**containers-release** (https://github.com/ayufan-rock64/linux-build) installed and an external USB SSD formatted with ext4 filesystem.
 
 1. connect and mount external USB SSD
@@ -50,8 +49,7 @@ The following steps require your rock64 to have the latest ayufan-**containers-r
 		14600/udp | IOTA/IRI UDP neighbor connection port
 		15600/tcp | IOTA/IRI TCP neighbor connection port
 
-### Additional Information
-
+### additional Information
 use ```./stop.sh``` ```./start.sh``` or ```./restart.sh``` to stop/start/restart the IRI container
 
 **Do not use** ```docker stop``` or ```docker restart``` since this can break your IRI database!
@@ -62,6 +60,8 @@ use ```./stop.sh``` ```./start.sh``` or ```./restart.sh``` to stop/start/restart
 
 If you need assistance feel free to ask in the iota discord ```#help``` channel or write a discord PM to ```Ben.#0981```
 
-### Thanks
+### image
+you can find the built image on hub.docker here: https://hub.docker.com/r/fben/rock64iri
 
+### thanks
 Thanks a lot to muXxer and perfectstorm85 for the IRI/Docker/Rock64 work they did before. Made it a lot easier for me and I was able to copy/paste a lot of stuff :)
