@@ -58,6 +58,16 @@ use ```./stop.sh``` ```./start.sh``` or ```./restart.sh``` to stop/start/restart
 
 ```./getnodeinfo.sh``` can be used to check the local node information
 
+If you notice lags or high latency on your network connection there might be an issue with the network driver in the ayufan image. This is a bug which can lead to high temperatures on the ethernet-chip and thus cause packetloss on your connection. To prevent this you can throttle the network connection to 100mbit/s which will prevent overheating but not affect the IRI performance. To do this run
+
+```sudo crontab -e```
+
+and add the following line:
+
+```@reboot /sbin/ethtool -s eth0 speed 100 duplex full```
+
+restart your rock and you are good to go.
+
 If you need assistance feel free to ask in the iota discord ```#help``` channel or write a discord PM to ```Ben.#0981```
 
 ### image
