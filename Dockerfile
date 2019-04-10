@@ -47,7 +47,7 @@ RUN mvn install:install-file -Dfile=rocksdbjni-${ROCKSDB_VERSION}-linux64.jar -D
 
 # Clone and build IRI
 WORKDIR /iri-aarch64
-RUN git clone $REPO_IRI -b REPO_IRI_BRANCH
+RUN git clone $REPO_IRI -b $REPO_IRI_BRANCH
 WORKDIR /iri-aarch64/iri
 RUN mvn clean compile && mvn package
 
