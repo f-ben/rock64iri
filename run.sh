@@ -21,4 +21,4 @@ docker run -d --restart always --name iri \
            -p $UDPPORT:$UDPPORT/udp \
            -p $TCPPORT:$TCPPORT \
            -v $ROCK64IRIDATA:/data \
-           fben/rock64iri:1.6.1-RELEASE
+           fben/rock64iri:1.7.0-DEV
