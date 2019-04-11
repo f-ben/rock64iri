@@ -5,7 +5,7 @@
 
 FROM arm64v8/maven:3.5-jdk-8 as builder
 ARG REPO_IRI=https://github.com/f-ben/iri.git
-ARG REPO_IRI_BRANCH=release-v1.7.0
+ARG REPO_IRI_BRANCH=dev
 ARG REPO_ROCKSDB=https://github.com/facebook/rocksdb.git
 ARG REPO_ROCKSDB_BRANCH=5.18.fb
 ARG ROCKSDB_VERSION=5.18.3
