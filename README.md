@@ -58,15 +58,17 @@ The following steps require your rock64 to have the latest ayufan-**containers-r
 
 4. ```./getnodeinfo.sh``` can be used to check the local node information
 
-5. If you notice lags or high latency on your network connection there might be an issue with the network driver in the ayufan image. This is a bug which can lead to high temperatures on the ethernet-chip and thus cause packetloss on your connection. To prevent this you can throttle the network connection to 100mbit/s which will prevent overheating but not affect the IRI performance. To do this run
+5. If you notice lags or high latency on your network connection there might be an issue with the network driver in the ayufan image. This is a bug which can lead to high temperatures on the ethernet-chip and thus cause packetloss on your connection. To prevent this you can throttle the network connection to 100mbit/s which will prevent overheating but not affect the IRI performance. Also I´d suggest to restart your rock regularly to prevent hickups. To do this run
 
 	```sudo crontab -e```
 
-	and add the following line:
+	and add the following lines:
 
+	```0 */12 * * * /sbin/reboot >/dev/null 2>&1```
+	
 	```@reboot /sbin/ethtool -s eth0 speed 100 duplex full```
 
-	restart your rock and you are good to go.
+	restart your rock and you are good to go. The first line will reboot your rock every 12 hours, the second line will throttle your network connection to 100mbit/s after the restart.
 
 If you need assistance feel free to ask in the iota discord ```#help``` channel or write a discord PM to ```Ben.#0981```
 
